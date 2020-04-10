@@ -1,4 +1,4 @@
-//import java.util.Scanner;
+import java.util.Scanner;
 /**
  * 교통신호에 따라 RobotWalk 속도가 변경되는 프로그램입니다.
  * 
@@ -8,18 +8,12 @@
 public class RobotTest
 {
     public static void main(String[] args){
-        //double speed = 5.0;
-        //String color;
-        // System.out.println("교통신호의 상태는?");
-        // Scanner scanner = new Scanner(System.in);
-        // String color = scanner.next();
-        //RobotWalk(color,speed);
-        double speed;
-        String color;
-
-        new Robot();
-        // robo = new RobotWalk();
-        //System.out.println(RobotWalk("green",5));
-        
+        double speed = 5.0;
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("교통신호는 :");
+        String color = scanner.nextLine();
+    
+        Robot robot = new Robot();
+        System.out.println(robot.RobotWalk(color,speed));
     }
 }
