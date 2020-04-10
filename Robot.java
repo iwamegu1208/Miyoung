@@ -1,33 +1,21 @@
-import java.util.Scanner;
+
 /**
- * Write a description of class Robot here.
- *
- * @author (your name)
- * @version (a version number or a date)
+ * 교통신호에 따라 RobotWalk 속도가 변경되는 프로그램
+ * 
+ * @author (2018315030 이가영,2018315059 이와사키 메구미) 
+ * @version (2020.04.10)
  */
 public class Robot
-{
-    public static void RobotWalk(String color, double speed)
-    {
-        //System.out.print(color);
+{ 
+    public static double RobotWalk(String color, double speed){
         if(color.equals("green")){
-            System.out.println("속도를 유지하고 보행합니다.");
+            return speed;
         }
         else if(color.equals("yellow")){
-            System.out.println("보행속도를 " + speed*1.2 + "km/h로 걷습니다.");
+            return speed*1.2 ;
         }
         else{
-            System.out.println("동작을 멈춥니다.");
-        }
-    }
-    
-    public static void main(String[] args){
-        double speed = 10;
-        while(true){
-            Scanner scanner = new Scanner(System.in);
-            System.out.print("교통신호는 :");
-            String color = scanner.nextLine();
-            RobotWalk(color,speed);
+            return 0;
         }
     }
 }
